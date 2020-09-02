@@ -1,0 +1,25 @@
+body {
+    background-color: turquoise;
+}
+
+h1 {
+    font-family: 'Passion One', cursive;
+    font-size: 80px;
+    color: gold;
+}
+
+h2 {
+    font-family: 'Passion One', cursive;
+    font-size: 40px;
+    color: gold;
+}
+
+p {
+    font-family: 'EB Garamond', serif;
+    font-size: 26px;
+    color: hotpink;
+}
+
+a {
+    color: lawngreen;
+}
