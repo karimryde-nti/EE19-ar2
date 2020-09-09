@@ -1,0 +1,21 @@
+body {
+    background: url("./bilder/skane.jpg");
+}
+h1 {
+    font-family: 'Grandstander', cursive;
+    color: yellow;
+    margin: 20px;
+}
+p {
+    font-family: 'Lora', serif;
+    color: yellow;
+    background-color: rgba(0, 0, 255, 0.863);
+    width: 500px;
+    border: 5px solid yellow;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+img {
+
+}
