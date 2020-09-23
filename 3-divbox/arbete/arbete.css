@@ -1,0 +1,93 @@
+/* Enkel CSS-reset */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body, h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidans utseende */
+body.sida1 {
+    background: url("./bilder/pattern1.jpg");
+}
+body.sida2 {
+    background: url("./bilder/pattern2.jpg");
+}
+body.sida3 {
+    background: url("./bilder/pattern3.jpg");
+}
+body.sida4 {
+    background: url("./bilder/pattern4.jpg");
+}
+body.sida5 {
+    background: url("./bilder/pattern5.jpg");
+}
+body.sida6 {
+    background: url("./bilder/pattern6.jpg");
+}
+
+/* Boxens utseende */
+div.box1 {
+    background: #FFF;
+    width: 600px; /* Låser brädden */
+    padding: 50px; /* Luft på insidan */
+    margin: 100px auto 0 auto; /* I mitten på sidan */
+    border: 5px dashed #555;
+}
+div.box2 {
+    background: #eec9c9;
+    width: 600px; /* Låser brädden */
+    padding: 50px; /* Luft på insidan */
+    margin: 100px auto 0 auto; /* I mitten på sidan */
+    border: 5px dashed #555;
+}
+div.box3 {
+    background: #eaf1be;
+    width: 600px; /* Låser brädden */
+    padding: 50px; /* Luft på insidan */
+    margin: 100px auto 0 auto; /* I mitten på sidan */
+    border: 5px dashed #555;
+}
+div.box4 {
+    background: #9ce2c5;
+    width: 600px; /* Låser brädden */
+    padding: 50px; /* Luft på insidan */
+    margin: 100px auto 0 auto; /* I mitten på sidan */
+    border: 5px dashed #555;
+}
+div.box5 {
+    background: #b0cfdb;
+    width: 600px; /* Låser brädden */
+    padding: 50px; /* Luft på insidan */
+    margin: 100px auto 0 auto; /* I mitten på sidan */
+    border: 5px dashed #555;
+}
+div.box6 {
+    background: #e6c8f0;
+    width: 600px; /* Låser brädden */
+    padding: 50px; /* Luft på insidan */
+    margin: 100px auto 0 auto; /* I mitten på sidan */
+    border: 5px dashed #555;
+}
+
+/* Innehållets utseende */
+h1 {
+    font-family: 'Grenze Gotisch', cursive;
+    font-size: 80px;
+}
+p {
+    font-family: 'Noto Serif', serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+a {
+    text-decoration: none;
+    color: #dd9000;
+}
+a:hover {
+    color: #00db92;
+}
