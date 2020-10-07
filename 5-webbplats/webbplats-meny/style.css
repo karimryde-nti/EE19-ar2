@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Passion+One&family=Roboto+Slab&display=swap');
+
+/* CSS HEX */
+:root {
+    --charcoal: #264653ff;
+    --persian-green: #2a9d8fff;
+    --orange-yellow-crayola: #e9c46aff;
+    --sandy-brown: #f4a261ff;
+    --burnt-sienna: #e76f51ff;
+}
+
 /* Enkel CSS-reset */
 html {
     box-sizing: border-box;
@@ -8,4 +19,84 @@ html {
 body, h1, h2, h3, h4, h5, h6, p, ul {
     margin: 0;
     padding: 0;
+}
+
+/* Sidans utseende */
+.kontainer {
+    background: #EEE;
+    width: 800px;
+    margin: auto; /* I mitten av webbläsarfönstret */
+    padding: 40px;
+}
+
+/* Sidans rubriker */
+.kontainer h1 {
+    /* Gäller bara alla h1 inuti div.kontainer */
+    font-family: 'Passion One', cursive;
+    color: #e76f51ff;
+    font-size: 90px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(153, 153, 153, 0.932);
+}
+.kontainer h2 {
+    /* Gäller bara alla h2 inuti div.kontainer */
+    font-family: 'Roboto Slab', serif;
+    font-size: 40px;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Menyns utseende */
+.kontainer ul {
+    list-style-type: none;
+    text-align: center;
+}
+.kontainer ul li {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    display: inline; /* Horisontellt */
+}
+.kontainer ul a { /* Menyknapparna */
+    background: #e9c46aff;
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 3px rgba(153, 153, 153, 0.9);
+    width: 130px;
+    display: inline-block; /* Lika breda */
+}
+.kontainer ul a:hover { /* När pekaren är över */
+    background: #e76f51ff;
+    box-shadow: none;
+}
+.kontainer ul a.aktiv {
+    background: #2a9d8fff;
+}
+
+/* Bildrutans utseende */
+.kontainer figure {
+    background: #FFF;
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 1px 1px 3px rgba(153, 153, 153, 0.561);
+}
+.kontainer figure img {
+    width: 100%;
+}
+.kontainer figure figcaption {
+    font-family: 'Roboto Slab', serif;
+}
+
+/* Sidans text */
+.kontainer p {
+    font-family: 'Roboto Slab', serif;
+    margin-top: 20px;
+}
+.kontainer p a {
+    background: var(--orange-yellow-crayola);
+    color: #FFF;
+    text-decoration: none;
 }
