@@ -49,7 +49,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 
 /* Menyns utseende */
 .kontainer ul {
-    list-style-type: none;
+    list-style-type: none; /* Tar bort punkterna */
     text-align: center;
 }
 .kontainer ul li {
