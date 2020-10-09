@@ -12,26 +12,49 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 
 /* Formulärets utseende */
 body {
-
+    background: #ececec;
 }
 form {
-    background: rgb(187, 211, 144);
+    background: #a7d9df;
     margin: 100px auto;
     width: 500px;
     border-radius: 10px;
     padding: 30px;
+
+    /* Två kolumner */
     display: grid;
     grid-template-columns: 150px auto;
+    gap: 10px;
+
+    box-shadow: 1px 1px 3px #536f72;
 }
 form label {
     font-family: 'Roboto', sans-serif;
 }
 form input {
     font-family: 'Roboto Mono', monospace;
-    margin-bottom: 15px;
     padding: 5px;
-    background: #000;
+    background: #d6d6d6;
     color: #FFF;
+    border: none;
+    border-radius: 3px;
+}
+form input[type="radio"], form input[type="checkbox"] {
+    background: #d6d6d6;
+    border: none;
+    color: aqua;
+}
+form select {
+    font-family: 'Roboto Mono', monospace;
+    padding: 5px;
+    background: #d6d6d6;
+    border: none;
+    border-radius: 3px;
+}
+form textarea {
+    font-family: 'Roboto Mono', monospace;
+    padding: 5px;
+    background: #d6d6d6;
     border: none;
     border-radius: 3px;
 }
@@ -41,8 +64,7 @@ form button {
     border: none;
     border-radius: 25px;
     font-size: 20px;
-    background: linear-gradient(0deg, rgba(99,94,187,1) 0%, rgba(214,113,45,1) 0%, rgba(190,187,84,1) 26%, rgba(213,189,48,1) 71%, rgba(238,42,8,1) 100%);
-}
+    background: linear-gradient(180deg, rgba(34,193,195,1) 0%, rgba(46,69,213,1) 100%);
 form button:hover {
     box-shadow: 0 0 10px #FFF;
 }
