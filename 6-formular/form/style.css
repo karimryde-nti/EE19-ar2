@@ -34,27 +34,27 @@ form label {
 form input {
     font-family: 'Roboto Mono', monospace;
     padding: 5px;
-    background: #d6d6d6;
+    background: #e7e7e7;
     color: #FFF;
     border: none;
     border-radius: 3px;
 }
 form input[type="radio"], form input[type="checkbox"] {
-    background: #d6d6d6;
+    background: #e7e7e7;
     border: none;
     color: aqua;
 }
 form select {
     font-family: 'Roboto Mono', monospace;
     padding: 5px;
-    background: #d6d6d6;
+    background: #e7e7e7;
     border: none;
     border-radius: 3px;
 }
 form textarea {
     font-family: 'Roboto Mono', monospace;
     padding: 5px;
-    background: #d6d6d6;
+    background: #e7e7e7;
     border: none;
     border-radius: 3px;
 }
