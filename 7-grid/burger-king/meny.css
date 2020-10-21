@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Nothing+You+Could+Do&display=swap');
 
 /* Enkel CSS-reset */
 html {
@@ -18,22 +18,32 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
 
 /* Sidhuvudets utseende */
 .sidhuvud {
-
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
 }
 .sidhuvud img {
 
 }
 .sidhuvud ul {
-
+    list-style-type: none; /* Tar bort punkterna */
+    margin: 30px 30px 0 0;
 }
 .sidhuvud li {
-
+    display: inline; /* Horisontellt */
+    margin-left: 60px;
 }
 .sidhuvud li a {
-
+    text-decoration: none;
+    color: #682F1C;
+    font-size: 24px;
+    text-transform: uppercase;
 }
 .sidhuvud li a:hover {
-
+    color: #B6978A;
+}
+.sidhuvud li a.aktiv {
+    color: #F7A600;
 }
 
 /* Rutornas utseende */
@@ -50,20 +60,30 @@ body, h1, h2, h3, h4, h5, h6, p, ul {
     background: #EFDAC5;
 }
 .rutor .burgare {
-    
+    text-align: center;
 }
 .rutor .burgare h1 {
-
+    color: #682F1C;
+    font-size: 45px;
+    text-transform: uppercase;
+    margin-top: 150px;
 }
 .rutor .burgare h2 {
-
+    color: #682F1C;
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 30px;
+    transform: rotate(-2deg);
 }
 .rutor .burgare img {
-    width: 100%;
+    width: 80%;
+    transition: all 0.2s; /* Mjuk övergång */
 }
 .rutor .burgare img:hover {
-
+    transform: scale(1.2);
 }
 .rutor .burgare p {
-
+    color: #682F1C;
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
 }
