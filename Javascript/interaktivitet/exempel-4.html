@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interaktivitet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Kul på webbsida</h1>
+        <img onclick="visaHej()" src="./bilder/gaetan-othenin-girard-mGfUWmCftzg-unsplash.jpg" alt="En galax">
+    </div>
+    <script>
+        // Visa en ruta som säger Hej!
+        function visaHej() {
+            alert("Hej på dig!");
+            document.title = "Hej på dig!";
+            document.body.style.backgroundColor = "red";
+            document.body.style.color = "green";
+        }
+    </script>
+</body>
+</html>
