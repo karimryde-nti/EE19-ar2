@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Tips på saker att göra</h1>
+        <button onclick="tips()">Ange dag</button>
+    </div>
+    <script>
+        function tips() {
+            var dag = prompt("Vad är det för dag idag?");
+
+            // Om det är fredag, köp chips på Lidl
+            if (dag == "fredag") {
+                window.location.href = "https://estrella.se";
+            } else if (dag == "lördag") {
+                window.location.href = "https://netflix.com";
+            } else if (dag == "söndag") {
+                window.location.href = "https://ikea.se"
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Inloggning</h1>
+        <button onclick="inloggning()">Ange lösenord</button>
+    </div>
+    <script>
+        function inloggning() {
+            var lösenord = prompt("Ange ett lösenord");
+
+            // Om lösenordet är rätt svara Rätt!
+            if (lösenord == "1234") {
+                alert("Bra jobbat!");
+            } else {
+                document.body.style.cssText = "background: red;";
+                alert("Fel lösenord!!! Försök igen!");
+                window.location.href = "http://www.lookwhogotbusted.com/";
+            }
+        }
+    </script>
+</body>
+</html>
