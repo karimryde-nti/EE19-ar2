@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Uppgift 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+        /* För att få delta i en tävling måste man vara mellan 16 och 19 år gammal.
+        Skapa ett skript som frågar användaren hur gammal hen.
+        Skriptet skriver sedan ut om hen får delta i tävlingen och om hen är för ung eller om hen är för gammal. */
+
+        // frågar användaren hur gammal hen
+        var ålder = prompt("Hur gammal är du?");
+
+        // Om hen är mellan 16 och 19 år får hen delta i tävlingen
+        // Skriptet skriver sedan ut om hen för ung eller om hen är för gammal
+        if (ålder >= 16 && ålder <= 19) {
+            alert("Du får delta!");
+        } else if (ålder < 16) {
+            alert("Du är för ung!");
+        } else {
+            alert("Du är för gammal!")
+        }
+    </script>
+</body>
+</html>
