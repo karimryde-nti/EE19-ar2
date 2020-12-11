@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uppgift 2b</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Uppgift 2b</h1>
+    </div>
+    <script>
+        /* Skapa ett skript som simulerar detta flödesschema */
+        // Lampan fungerar inte
+        alert("Lampan fungerar inte");
+        // Är lampan inkopplad?
+        var svar1 = prompt("Är lampan inkopplad? (j/n)");
+        if (svar1 == "n") {
+            // Svaret blev nej
+            // Koppla in lampan
+            alert("Koppla in lampan!");
+        } else {
+            // Svaret blev ja
+            // Är glödlampan utbränd?
+            var svar2 = prompt("Är glödlampan utbränd? (j/n)");
+            if (svar2 == "j") {
+                // Svaret blev ja
+                // Ersätt glödlampan
+                alert("Ersätt glödlampan");
+            } else {
+                // Svaret blev nej
+                // Köp ny lampan
+                alert("Köp ny lampan");
+            }
+        }
+    </script>
+</body>
+</html>
