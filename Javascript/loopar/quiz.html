@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Quiz</h1>
+        <p>Gissa rätt svar på 5 frågor</p>
+        <button onclick="quiz()">Starta quizen</button>
+    </div>
+    <script>
+        function quiz() {
+            var varv = 0;
+            var poäng = 0;
+
+            // Spelloop 5 ggr
+            while (varv < 5) {
+                
+                // Slumpa fram en fråga
+                var slumptal = Math.ceil(Math.random() * 5);    // 1, 2, 3, 4, 5
+                console.log(slumptal);
+
+                if (slumptal == 1) {
+                    var gissning = prompt("Vad är fortkortning för en dators processor?\n(1=cpu, 2=gpu, 3=mmu)");
+
+                    // Kolla om rätt?
+                    if (gissning == 1) {
+                        poäng++;    // Lägg till 1 poäng
+                    } else {
+                        poäng--;    // Dra av en poäng
+                    }
+                }
+
+                if (slumptal == 2) {
+                    var gissning = prompt("Vad av följande påverkar inte en processors hastighet?\n(1 = Processorkylningen, 2=Klockfrekvens, 3=Antal processorkärnor)");
+
+                    // Kolla om rätt?
+                    if (gissning == 1) {
+                        poäng++;    // Lägg till 1 poäng
+                    } else {
+                        poäng--;    // Dra av en poäng
+                    }
+                }
+
+                if (slumptal == 3) {
+                    var gissning = prompt("Vad heter den lag som förutspår att antalet transistorer fördubblas vartannat år?\n(1 = Moores lag, 2=Murphys lag, 3=Seagals lag)");
+
+                    // Kolla om rätt?
+                    if (gissning == 1) {
+                        poäng++;    // Lägg till 1 poäng
+                    } else {
+                        poäng--;    // Dra av en poäng
+                    }
+                }
+
+                if (slumptal == 4) {
+                    var gissning = prompt("Vilken typ av minnesmodul används till bärbara datorer?\n(1 = DIMM, 2=SO-DIMM, 3=SIMM)");
+
+                    // Kolla om rätt?
+                    if (gissning == 2) {
+                        poäng++;    // Lägg till 1 poäng
+                    } else {
+                        poäng--;    // Dra av en poäng
+                    }
+                }
+
+                if (slumptal == 5) {
+                    var gissning = prompt("Vad används för att beteckna något som är kompatibelt med Intels 32-bitars processor?\n(1 = amd64, 2=i32, 3=x86)");
+
+                    // Kolla om rätt?
+                    if (gissning == 3) {
+                        poäng++;    // Lägg till 1 poäng
+                    } else {
+                        poäng--;    // Dra av en poäng
+                    }
+                }
+
+                varv++;
+            }
+
+            alert("Du fick " + poäng + " poäng");
+        }
+    </script>
+</body>
+</html>
