@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Variabler och funktioner</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="rep.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Personuppgifter</h1>
+        <label>Förnamn <input class="fnamn" type="text"></label>
+        <label>Efternamn <input class="enamn" type="text"></label>
+        <label>Epost <input class="epost" type="text"></label>
+
+        <button>Skicka</button>
+
+        <label>Svar <textarea></textarea></label>
+    </div>
+    <script>
+        // Välja ut input-rutorna
+        const rutaFnamn = document.querySelector(".fnamn");
+        const rutaEnamn = document.querySelector(".enamn");
+        const rutaEpost = document.querySelector(".epost");
+
+        // Välja ut knappen
+        const knapp = document.querySelector("button");
+
+        // Välja ut svars-rutan
+        const rutaSvar = document.querySelector("textarea");
+
+        // Vad händer när man klickar på knappen
+        knapp.addEventListener("click", function () {
+            // Läs av rutan för förnamn och lagra i en variabel
+            console.log(rutaFnamn.value);
+            console.log(rutaEnamn.value);
+            console.log(rutaEpost.value);
+
+            // Lagra i variabler
+            var förnamn = rutaFnamn.value;
+            var efternamn = rutaEnamn.value;
+            var epost = rutaEpost.value;
+
+            // Skriva ut i rutaSvar
+            rutaSvar.value = förnamn;
+
+            // Skriv ut: Hej .. .. din epost är ...
+            rutaSvar.value = "Hej " + förnamn + " " + efternamn + " din epost är " + epost;
+        });
+    </script>
+</body>
