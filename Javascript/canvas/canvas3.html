@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rita i canvas</title>
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        // Hitta canvas-elementet
+        const rityta = document.querySelector("canvas");
+
+        // Gör ritytan större
+        rityta.width = 800;
+        rityta.height = 600;
+
+        // Slå på ritmotorn (rit-api)
+        var ctx = rityta.getContext("2d");
+
+        // Rita Sverige flaggan
+        /* ctx.fillStyle = "blue";
+        ctx.fillRect(100, 100, 500, 300);
+        ctx.fillStyle = "yellow";
+        ctx.fillRect(100, 220, 500, 50);
+        ctx.fillRect(300, 100, 50, 300); */
+
+        // Rita ett streck
+        /* ctx.beginPath();
+        ctx.lineWidth = 5;
+        ctx.moveTo(0, 0);
+        ctx.lineTo(400, 300);
+        ctx.lineTo(400, 400);
+        ctx.lineTo(500, 400);
+        ctx.lineTo(500, 300);
+        ctx.lineTo(800, 0);
+        ctx.stroke(); */
+
+        // Rita ett hus
+        ctx.beginPath();
+        ctx.lineWidth = 10;
+        ctx.fillStyle = "brown";
+        ctx.moveTo(100, 500);   // FLytta pennan
+        ctx.lineTo(100, 200);   // Rita med pennan
+        ctx.lineTo(300, 100);
+        ctx.lineTo(500, 200);
+        ctx.lineTo(500, 500);
+        ctx.lineTo(100, 500);
+        ctx.stroke();
+        //ctx.fill();
+    </script>
+</body>
+</html>

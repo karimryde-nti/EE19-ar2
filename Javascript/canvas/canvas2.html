@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rita i canvas</title>
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        // Hitta canvas-elementet
+        const rityta = document.querySelector("canvas");
+
+        // Gör ritytan större
+        rityta.width = 800;
+        rityta.height = 600;
+
+        // Slå på ritmotorn (rit-api)
+        var ctx = rityta.getContext("2d");
+
+        // Rita ett rutnät
+        ctx.fillStyle = "red";
+        ctx.fillRect(100, 100, 100, 100);
+        ctx.fillStyle = "green";
+        ctx.fillRect(200, 100, 100, 100);
+        ctx.fillStyle = "red";
+        ctx.fillRect(300, 100, 100, 100);
+        ctx.fillStyle = "green";
+        ctx.fillRect(400, 100, 100, 100);
+        ctx.fillStyle = "green";
+        ctx.fillRect(100, 200, 100, 100);
+        ctx.fillStyle = "red";
+        ctx.fillRect(200, 200, 100, 100);
+    </script>
+</body>
+</html>
