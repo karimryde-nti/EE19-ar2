@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Läsa in och skriva ut</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="labbar.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Läsa in och skriva ut</h1>
+        <label>Namn <input type="text" class="anamn"></label>
+        <label>Ålder <input type="text" class="ålder"></label>
+
+        <button class="knapp1 btn btn-primary">Skicka</button>
+        <button class="knapp2 btn btn-warning">Töm</button>
+
+        <label>Svar 1 <textarea class="svar1"></textarea></label>
+        <label>Svar 2 <textarea class="svar2"></textarea></label>
+    </div>
+    <script>
+        // En fast hårdkodad variabel
+        var intresse = "fotboll";
+
+        /* Börja koda här */
+        // Hitta elementen på webbsidan
+        const rutaNamn = document.querySelector(".anamn");
+        const rutaÅlder = document.querySelector(".ålder");
+        const rutaIntresse = document.querySelector(".intresse");
+
+        const knapp1 = document.querySelector(".knapp1");
+        const knapp2 = document.querySelector(".knapp2");
+
+        const rutaSvar1 = document.querySelector(".svar1");
+        const rutaSvar2 = document.querySelector(".svar2");
+
+        // När man klickar på första knappen
+        knapp1.addEventListener("click", function () {
+            // Läsa av 
+            var namn = rutaNamn.value;
+            var ålder = rutaÅlder.value;
+
+            // Sätt samman en mening
+            var mening = namn + " du är " + ålder + " år gammal, och gillar " + intresse;
+            console.log(mening);
+
+            // Skriva ut i ruta 1
+            rutaSvar1.value = mening;
+        });
+    </script>
+</body>
+</html>
