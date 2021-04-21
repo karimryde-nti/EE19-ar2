@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Skriva text</title>
+    <link rel="stylesheet" href="canvas.css">
+</head>
+<body>
+    <div class="kontainer">
+        <div class="sidebar">
+            <h1>Canvas</h1>
+            <label>X position <input class="inputX" type="text"></label>
+            <label>Y position <input class="inputY" type="text"></label>
+            <label>Bredd <input class="inputB" type="text"></label>
+            <label>Höjd <input class="inputH" type="text"></label>
+            <label>Färg <input class="färg" type="color"></label>
+            <button class="rita">Rita fyrkant</button>
+            <button class="sudda">Sudda ut!</button>
+        </div>
+        <canvas></canvas>
+    </div>
+    <script defer>
+        // Hitta elementet
+        const rityta = document.querySelector("canvas");
+        const rutaX = document.querySelector(".inputX");
+        const rutaY = document.querySelector(".inputY");
+        const rutaB = document.querySelector(".inputB");
+        const rutaH = document.querySelector(".inputH");
+        const rutaFärg = document.querySelector(".färg");
+        const knappRita = document.querySelector(".rita");
+        const knappSudda = document.querySelector(".sudda");
+
+        // Ställer in storleken
+        rityta.width = 600;
+        rityta.height = 600;
+
+        // Slå på ritmotorn
+        var ctx = rityta.getContext("2d");
+
+        // Vi använder variabler
+        var x = 100;                // Skapa variabeln x
+        var y = 200;                // Skapa variabeln y
+        ctx.fillStyle = "pink";
+        ctx.fillRect(x, y, 50, 50);
+
+        // Lyssna på knappen Rita
+        knappRita.addEventListener("click", function () {
+            // Läs av rutaX och rutaY
+            x = rutaX.value;
+            y = rutaY.value;
+            var b = rutaB.value;
+            var h = rutaH.value;
+
+            // Rita ut en fyrkant
+            ctx.fillStyle = rutaFärg.value;
+            ctx.fillRect(x, y, b, h);
+        });
+
+        // Lyssna på knappen Sudda
+        knappSudda.addEventListener("click", function () {
+            ctx.clearRect(0, 0, 600, 600);
+        })
+    </script>
+</body>
+</html>
