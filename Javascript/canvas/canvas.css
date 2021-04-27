@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
-    background: #000;
+    background: #818181;
 }
 canvas {
     border: 1px solid #55a5d2;
@@ -13,7 +13,7 @@ canvas {
 .kontainer {
     background: #e0e0e0;
     width: 1000px;
-    margin: auto;
+    margin: 1em auto;
     display: grid;
     grid-template-columns: auto auto;
     padding: 1em;
@@ -49,4 +49,5 @@ button {
     font-weight: bold;
     color: #FFF;
     background-color: #55a5d2;
+    cursor: pointer;
 }
