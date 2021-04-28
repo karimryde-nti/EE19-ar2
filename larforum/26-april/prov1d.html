@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Prov 1d</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Skapa sms</h1>
+        <h2>Input</h2>
+        <label><a target="_blank" href="https://getemoji.com/">Välj emoji</a> <input class="emoji" type="text"></label>
+        <label>Ange antal <input class="antal" type="text"></label>
+        <label>Ange texten <input class="texten" type="text"></label>
+        <button class="skicka">Skicka</button>
+        <button class="slumpa">Slumpa emoji</button>
+
+        <h2>Output</h2>
+        <label>Svar <textarea></textarea></label>
+    </div>
+    <script>
+        // Hitta elementen på webbsidan
+        const rutaEmoji = document.querySelector(".emoji");
+        const rutaAntal = document.querySelector(".antal");
+        const rutaTexten = document.querySelector(".texten");
+        const knappSkicka = document.querySelector(".skicka");
+        const knappSlumpa = document.querySelector(".slumpa");
+        const rutaSvar = document.querySelector("textarea");
+
+        // När man trycker på knappen -> läs av rutorna
+        knappSkicka.addEventListener("click", function () {
+            //console.log("Klickat på knappen!");
+
+            // Läs av emoji-rutan
+            // Dvs vad är värdet i rutan?
+            //console.log(rutaEmoji.value);
+            //console.log(rutaAntal.value);
+            //console.log(rutaTexten.value);
+            
+            // Skapar en variabel
+            var emoji = rutaEmoji.value;
+            //console.log(emoji);
+            var antal = rutaAntal.value;
+            //console.log(antal);
+            var texten = rutaTexten.value;
+            //console.log(texten);
+
+            // Skriv ett svar
+            //var svar = antal + " " + emoji + " " + texten;
+            //console.log(svar);
+            var svar = antal;
+            
+            // Upprepa med for-loop
+            for (var i = 0; i < antal; i++) {
+               svar += " " + emoji; 
+            }
+
+            svar += " " + texten;
+
+            // Skriv ut svarsrutan
+            rutaSvar.value = svar;
+        });
+    </script>
+</body>
+</html>
