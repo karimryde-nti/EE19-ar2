@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Läsa av input-rutor</h1>
+        <h2>Input</h2>
+        <label>Ange tal1 <input class="tal1" type="text"></label>
+        <label>Ange tal2 <input class="tal2" type="text"></label>
+        <button>Räkna</button>
+
+        <label>tal1 + tal2 = <input class="plus" type="text"></label>
+        <label>tal1 - tal2 = <input class="minus" type="text"></label>
+        <label>tal1 * tal2 = <input class="gånger" type="text"></label>
+    </div>
+    <script>
+        //  Connecta till element
+        const rutaTal1 = document.querySelector(".tal1");
+        const rutaTal2 = document.querySelector(".tal2");
+        const knappen = document.querySelector("button");
+        const rutaPlus = document.querySelector(".plus");
+        const rutaMinus = document.querySelector(".minus");
+        const rutaGånger = document.querySelector(".gånger");
+
+        // När man klickar på knappen
+        knappen.addEventListener("click", function () {
+            
+            // Skriv ut summan i första rutan
+            rutaPlus.value = parseInt(rutaTal1.value) + parseInt(rutaTal2.value);
+
+            // Skriv ut minus
+            rutaMinus.value = rutaTal1.value - rutaTal2.value;
+
+            // Skriv ut gånger
+            rutaGånger.value = rutaTal1.value * rutaTal2.value;
+        })
+    </script>
+</body>
+</html>
