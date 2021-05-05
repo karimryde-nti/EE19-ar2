@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rumsbokning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Boka rum</h1>
+        <h2>Beställning</h2>
+        <label>Antal nätter <input type="text" class="antal"></label>
+        <label>Enkelrum 800:-, dubbelrum 1200:- <input type="text" class="pris"></label>
+        <label>Tillägg wifi 100:- <input type="text" class="wifi"></label>
+        <label>Tillägg parkering 50:- <input type="text" class="parkering"></label>
+        <button>Räkna ut</button>
+
+        <h2>Uppskattad kostnad</h2>
+        <label>Pris för rummet <input type="text" class="prisRummet" disabled></label>
+        <label>Pris för tillägg <input type="text" class="prisTillägg" disabled></label>
+        <label>Total för bokning <input type="text" class="total" disabled></label>
+    </div>
+    <script>
+        // "Connecta" till element vi använder
+        const rutaAntal = document.querySelector(".antal");
+        const rutaPris = document.querySelector(".pris");
+        const rutaWifi = document.querySelector(".wifi");
+        const rutaParkering = document.querySelector(".parkering");
+        const knappen = document.querySelector("button");
+        const rutaPrisRummet = document.querySelector(".prisRummet");
+        const rutaPrisTillägg = document.querySelector(".prisTillägg");
+        const rutaTotal = document.querySelector(".total");
+
+        // När man klicka på knappen
+        knappen.addEventListener("click", function () {
+            console.log(rutaAntal.value);
+            console.log(rutaPris.value);
+            console.log(rutaWifi.value);
+            console.log(rutaParkering.value);
+
+            // Räkna ut delsumma för rummet, antal * pris-för-rummet
+            rutaPrisRummet.value = rutaAntal.value * rutaPris.value;
+
+            // Räkna u delsumma för tilläggen, wifi + parkering
+            rutaPrisTillägg.value = parseInt(rutaWifi.value) + parseInt(rutaParkering.value);
+
+            // Räkna ut totalsumman, pris-för-rummet + alla-tillägg
+            rutaTotal.value = parseInt(rutaAntal.value * rutaPris.value) + parseInt(rutaWifi.value) + parseInt(rutaParkering.value);
+        })
+    </script>
+</body>
+</html>
