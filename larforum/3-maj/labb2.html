@@ -3,33 +3,42 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
+    <title>Läsa av input-rutor</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="kontainer">
         <h1>Läsa av input-rutor</h1>
         <h2>Input</h2>
-        <label>Ange lösenord <input class="lösenord" type="text"></label>
+        <label>Ange förnamn <input class="fnamn" type="text"></label>
+        <label>Ange efternamn <input class="enamn" type="text"></label>
+        <label>Ange Ålder <input class="ålder" type="text"></label>
         <button>Skicka</button>
         <h2>Output</h2>
         <label>Svar <textarea></textarea></label>
     </div>
     <script>
-        //  Connecta till element
-        const rutaLösenord = document.querySelector(".lösenord");
+        // Connecta till element
+        const rutaFnamn = document.querySelector(".fnamn");
+        const rutaEnamn = document.querySelector(".enamn");
+        const rutaÅlder = document.querySelector(".ålder");
         const knappen = document.querySelector("button");
         const rutaSvar = document.querySelector("textarea");
 
         // När man klickar på knappen
         knappen.addEventListener("click", function () {
+            console.log("Du klickade på knappen");
+            console.log(rutaFnamn.value);
 
-            // Om man är 18 får man köra bil
-            if (rutaLösenord.value == "12345") {
-                rutaSvar.value = "Topp, det är bra gjort!";
-            } else {
-                rutaSvar.value = "Sorry, försök igen!";
-            }
+           // rutaSvar.value = "Hej Hej " + rutaFnamn.value + rutaEnamn.value + rutaÅlder.value + ", Hur mår du?";
+
+           //  Om man är 18 får man köra bil
+
+           if (rutaÅlder.value >= 18) {
+               rutaSvar.value = rutaFnamn.value + "Grattis! " + rutaFnamn.value + " Du får äntligen köra pappas bil!";
+           } else {
+               rutaSvar.value = "Sorry, " + rutaFnamn.value + "Du är för ung!";
+           }
         });
     </script>
 </body>

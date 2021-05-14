@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>querySelector() och value</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Är du människa?</h1>
+        <h2>Input</h2>
+        <label><span>Vad är svaret på?</span> <input class="input" type="text"></label>
+        <button>Gissa</button>
+
+        <h2>Output</h2>
+        <label>Svar <textarea></textarea></label>
+    </div>
+    <script>
+        // Hitta elementen
+        const rutaSpan = document.querySelector("span");
+        const rutaInput = document.querySelector(".input")
+        const knapp = document.querySelector("button");
+        const rutaSvar = document.querySelector("textarea");
+
+        // Slumpa 2 tal
+        var tal1 = Math.ceil(Math.random() * 10);
+        var tal2 = Math.ceil(Math.random() * 10);
+        var summa = tal1 * tal2;
+        console.log(tal1, tal2, summa);
+        // Skriv ut gåtan
+        rutaSpan.textContent = "Vad är " + tal1 + " * " + tal2 + "? ";
+
+        // När man klickar på knappen
+
+        knapp.addEventListener("click", function () {
+            if (rutaInput.value == summa){
+                rutaSvar.value = "Bra gissat! helt rätt";
+            } else {
+                rutaSvar.value = "Fel gissat, försök igen!";
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>querySelector() och value</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kontainer">
+        <h1>Hemlig text</h1>
+        <h2>Input</h2>
+        <label>Ange kod <input class="kod" type="text"></label>
+        <button>Visa hemlig text</button>
+
+        <h2>Output</h2>
+        <label>Svar <textarea></textarea></label>
+    </div>
+    <script>
+        const rutaInput = document.querySelector(".kod");
+        const knapp = document.querySelector("button");
+        const rutaSvar = document.querySelector("textarea");
+
+        knapp.addEventListener("click", function () {
+            console.log("Du klickade på knappen!");
+
+            if (rutaInput.value == "55") {
+                rutaSvar.value = "Ooh\n" +
+                    "You can dance\m" +
+                    "You can jive\n" +
+                    "Having the time of your life\n" +
+                    "Ooh, see that girl\n" +
+                    "Watch that scene\n" +
+                    "Digging the dancing queen";
+            } else {
+                rutaSvar.value = "Fel kod, pröva igen!"
+            }
+        })
+    </script>
+</body>
+</html>
